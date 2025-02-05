@@ -1,0 +1,165 @@
+* {
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+body{
+    background-color:#fff;
+    box-shadow:0px  2px 4px black;
+    border-radius:1rem;
+
+ }
+ main{
+    padding: 1rem;
+   }
+ header{
+    background-color: white;
+    margin-bottom: 5px;
+
+ h1{
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: small; 
+     padding: 20px;
+   }
+  }
+   .products {
+    display: grid;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap: 20px;
+    background-color:mistyrose;
+   
+   }
+   .product{ 
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 10px;
+    /* gap: 10rem; */
+    border-bottom:  4px  solid grey;
+    animation: product 3s ease-in infinite;
+}
+.product-button-container{
+    display: flex;
+    justify-content: space-between;
+}
+   .product img{
+      width: 100%; 
+      border-top-left-radius: 6px;
+  }
+   h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: xx-small;
+    }
+p{ 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: xx-small;
+ }
+    .price{
+        font-size: large;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        /* margin: 10px; */
+    }
+    button{
+        width: 5rem;
+        height: 2.5rem;
+        border: none;
+        border-radius: 6px;
+        background-color:red;
+        text-align: center;
+        font-size: 10px;
+        animation: btn 6s ease-in infinite;
+    }
+    button a{
+      text-decoration: none;
+      color: #fff;
+    }
+    /* @keyframes btn {
+      0%{
+        transform: scale(1.2, 0.9);
+       }20%{
+        transform: scale(1.2, 1.2);
+       }
+       40%{
+        transform: scale(1.2, 1.1);
+       }
+       60%{
+        transform: scale(1.2, 1.4);
+       }
+       100%{
+        transform: scale(2.0, 1.0);
+       }
+    } */
+    
+.product:hover button{ 
+      scale: 1.2;
+      } 
+      .product:hover {
+        scale :1.05;
+        border-color:3px solid rgb(156, 18, 48);
+       border-left: 2px solid rgb(177, 16, 77);
+       border-right:  2px solid rgb(221, 27, 134);
+       border-top:2px solid rgb(255, 0, 149);
+       border-bottom:2px solid rgb(194, 28, 125);
+      }
+    footer{
+     background-color: #fff;
+     justify-items:center;
+     padding: 10px;
+     width: 100%;
+     height: 6rem;
+     display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+     
+    }
+    @keyframes btn {
+      from{background-color: #636bc5;}
+      to{background-color: grey;}
+      to{background-color: rgb(60, 131, 60);}
+      to{background-color: rgb(63, 26, 26);}
+    }
+    
+ /*=============================================  */
+
+/* Responsive Styles for Tablet Screens */
+@media screen and (min-width: 768px) and (max-width:1004px)
+{
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  
+    footer {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    footer section {
+      display: flex;
+      gap: 5rem;
+    }
+  }
+  /* ============================================ */
+
+/* Responsive Styles for Desktop Screens */
+@media screen and (min-width: 1004px) {
+    .products {
+      grid-template-columns: repeat(3, 1fr);
+    }
+     
+    footer {
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      text-align: left;
+    }
+  
+    footer section {
+    align-items: center;
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    }
+  }
